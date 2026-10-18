@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Scheduled Message",
+  "version": "1.0.0",
+  "description": "Open a Claude page and submit a scheduled message.",
+  "permissions": [
+    "alarms",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://claude.ai/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

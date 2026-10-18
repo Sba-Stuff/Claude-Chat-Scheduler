@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 320px;
+      padding: 14px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    input, textarea, button {
+      box-sizing: border-box;
+      width: 100%;
+      margin-top: 5px;
+      padding: 9px;
+    }
+
+    textarea { height: 100px; }
+    button { cursor: pointer; }
+    #status { white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h3>Scheduled Message</h3>
+
+  <label for="time">Run at</label>
+  <input id="time" type="datetime-local" required>
+
+  <label for="url">Page URL</label>
+  <input id="url" type="url"
+    value="https://claude.ai/" required>
+
+  <label for="message">Message</label>
+  <textarea id="message"
+    placeholder="Enter your message here" required></textarea>
+
+  <button id="schedule">Schedule action</button>
+  <button id="cancel">Cancel schedule</button>
+
+  <p id="status" role="status"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
